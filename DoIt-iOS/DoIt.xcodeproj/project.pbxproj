@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */; };
+		2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7931E628AE8007E7A9D /* Task.swift */; };
 		2CDFCCDA1E62834E00C37E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */; };
-		2CDFCCDC1E62834E00C37E2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFCCDB1E62834E00C37E2B /* ViewController.swift */; };
 		2CDFCCDF1E62834E00C37E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFCCDD1E62834E00C37E2B /* Main.storyboard */; };
 		2CDFCCE11E62834E00C37E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFCCE01E62834E00C37E2B /* Assets.xcassets */; };
 		2CDFCCE41E62834E00C37E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFCCE21E62834E00C37E2B /* LaunchScreen.storyboard */; };
@@ -26,9 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = Controllers/TaskListViewController.swift; sourceTree = "<group>"; };
+		2CDCB7931E628AE8007E7A9D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
 		2CDFCCD61E62834E00C37E2B /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CDFCCDB1E62834E00C37E2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CDFCCDE1E62834E00C37E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CDFCCE01E62834E00C37E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CDFCCE31E62834E00C37E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CDCB7921E628AA1007E7A9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2CDCB7951E628AEC007E7A9D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CDCB7931E628AE8007E7A9D /* Task.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		2CDFCCCD1E62834D00C37E2B = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +95,9 @@
 		2CDFCCD81E62834E00C37E2B /* DoIt */ = {
 			isa = PBXGroup;
 			children = (
+				2CDCB7951E628AEC007E7A9D /* Models */,
+				2CDCB7921E628AA1007E7A9D /* Controllers */,
 				2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */,
-				2CDFCCDB1E62834E00C37E2B /* ViewController.swift */,
 				2CDFCCDD1E62834E00C37E2B /* Main.storyboard */,
 				2CDFCCE01E62834E00C37E2B /* Assets.xcassets */,
 				2CDFCCE21E62834E00C37E2B /* LaunchScreen.storyboard */,
@@ -201,8 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CDFCCDC1E62834E00C37E2B /* ViewController.swift in Sources */,
 				2CDFCCDA1E62834E00C37E2B /* AppDelegate.swift in Sources */,
+				2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */,
+				2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZP68SFV34;
 				INFOPLIST_FILE = DoIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.DoIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZP68SFV34;
 				INFOPLIST_FILE = DoIt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michael.DoIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,6 +432,7 @@
 				2CDFCCF51E62834E00C37E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CDFCCF61E62834E00C37E2B /* Build configuration list for PBXNativeTarget "DoItTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +441,7 @@
 				2CDFCCF81E62834E00C37E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
