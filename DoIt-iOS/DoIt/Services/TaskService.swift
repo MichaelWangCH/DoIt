@@ -9,5 +9,10 @@
 import UIKit
 
 class TaskService: NSObject {
+    func getTaskList() -> [Task] {
+        let taskList = [Task(taskID: "1", taskName: "Complete coding the demo"),
+                        Task(taskID: "2", taskName: "Finish reading the document")]
 
+        return taskList
+    }
 }
