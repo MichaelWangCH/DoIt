@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */; };
 		2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7931E628AE8007E7A9D /* Task.swift */; };
+		2CDCB7971E62B190007E7A9D /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7961E62B190007E7A9D /* TaskService.swift */; };
 		2CDFCCDA1E62834E00C37E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */; };
 		2CDFCCDF1E62834E00C37E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFCCDD1E62834E00C37E2B /* Main.storyboard */; };
 		2CDFCCE11E62834E00C37E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFCCE01E62834E00C37E2B /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = Controllers/TaskListViewController.swift; sourceTree = "<group>"; };
 		2CDCB7931E628AE8007E7A9D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
+		2CDCB7961E62B190007E7A9D /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskService.swift; path = Services/TaskService.swift; sourceTree = "<group>"; };
 		2CDFCCD61E62834E00C37E2B /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CDFCCDE1E62834E00C37E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		2CDCB7981E62B198007E7A9D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2CDCB7961E62B190007E7A9D /* TaskService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		2CDFCCCD1E62834D00C37E2B = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		2CDFCCD81E62834E00C37E2B /* DoIt */ = {
 			isa = PBXGroup;
 			children = (
+				2CDCB7981E62B198007E7A9D /* Services */,
 				2CDCB7951E628AEC007E7A9D /* Models */,
 				2CDCB7921E628AA1007E7A9D /* Controllers */,
 				2CDFCCD91E62834E00C37E2B /* AppDelegate.swift */,
@@ -220,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDCB7971E62B190007E7A9D /* TaskService.swift in Sources */,
 				2CDFCCDA1E62834E00C37E2B /* AppDelegate.swift in Sources */,
 				2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */,
 				2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */,
