@@ -11,12 +11,12 @@ import UIKit
 class TaskListViewController: UIViewController {
 
     @IBOutlet weak var taskListTableView: UITableView!
+    let refreshControl = UIRefreshControl()
+
     var taskList: [Task] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        taskList = TaskService().getTaskList()
 
         taskListTableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.cellReuseIdentifier)
         taskListTableView.estimatedRowHeight = 60
@@ -24,6 +24,20 @@ class TaskListViewController: UIViewController {
         taskListTableView.tableFooterView = UIView(frame: CGRect.zero)
         taskListTableView.dataSource = self
         taskListTableView.delegate = self
+
+        refreshControl.addTarget(self, action: #selector(refreshTaskList), for: .valueChanged)
+        taskListTableView.addSubview(refreshControl)
+
+        refreshTaskList()
+    }
+
+    func refreshTaskList() {
+        taskList = TaskService().getTaskList()
+        taskListTableView.reloadData()
+
+        if refreshControl.isRefreshing {
+            refreshControl.endRefreshing()
+        }
     }
 }
 
