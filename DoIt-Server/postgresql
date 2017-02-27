@@ -1,0 +1,11 @@
+createdb doit;
+
+psql doit;
+
+CREATE TABLE tasks (
+    id     	 serial       PRIMARY KEY,
+    name     varchar(200) NOT NULL
+);
+
+insert into tasks(name) values('Complete coding the demo');
+insert into tasks(name) values('Finish reading the document');
