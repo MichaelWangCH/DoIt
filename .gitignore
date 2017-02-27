@@ -48,8 +48,8 @@ playground.xcworkspace
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-./DoIt-iOS/Carthage/Checkouts
-./DoIt-iOS/Carthage/Build
+./Carthage/Checkouts
+./Carthage/Build
 
 # fastlane
 #
