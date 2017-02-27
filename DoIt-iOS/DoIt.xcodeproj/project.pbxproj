@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2A246A1E642A9200EF7C4C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A24691E642A9200EF7C4C /* Cartfile */; };
+		2C2A246F1E642EB200EF7C4C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2A246E1E642EB200EF7C4C /* Alamofire.framework */; };
+		2C2A24701E642EB200EF7C4C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2A246E1E642EB200EF7C4C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */; };
 		2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7931E628AE8007E7A9D /* Task.swift */; };
 		2CDCB7971E62B190007E7A9D /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7961E62B190007E7A9D /* TaskService.swift */; };
@@ -27,7 +30,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2C2A24711E642EB200EF7C4C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C2A24701E642EB200EF7C4C /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C2A24691E642A9200EF7C4C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		2C2A246C1E642D3600EF7C4C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2C2A246E1E642EB200EF7C4C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = Controllers/TaskListViewController.swift; sourceTree = "<group>"; };
 		2CDCB7931E628AE8007E7A9D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
 		2CDCB7961E62B190007E7A9D /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskService.swift; path = Services/TaskService.swift; sourceTree = "<group>"; };
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2A246F1E642EB200EF7C4C /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2A246B1E642D3600EF7C4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C2A246C1E642D3600EF7C4C /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2CDCB7921E628AA1007E7A9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +116,12 @@
 		2CDFCCCD1E62834D00C37E2B = {
 			isa = PBXGroup;
 			children = (
+				2C2A246E1E642EB200EF7C4C /* Alamofire.framework */,
+				2C2A24691E642A9200EF7C4C /* Cartfile */,
 				2CDFCCD81E62834E00C37E2B /* DoIt */,
 				2CDFCCED1E62834E00C37E2B /* DoItTests */,
 				2CDFCCD71E62834E00C37E2B /* Products */,
+				2C2A246B1E642D3600EF7C4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +168,7 @@
 				2CDFCCD21E62834E00C37E2B /* Sources */,
 				2CDFCCD31E62834E00C37E2B /* Frameworks */,
 				2CDFCCD41E62834E00C37E2B /* Resources */,
+				2C2A24711E642EB200EF7C4C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +246,7 @@
 			files = (
 				2CDFCCE41E62834E00C37E2B /* LaunchScreen.storyboard in Resources */,
 				2CDFCCE11E62834E00C37E2B /* Assets.xcassets in Resources */,
+				2C2A246A1E642A9200EF7C4C /* Cartfile in Resources */,
 				2CDFCCDF1E62834E00C37E2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +406,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZP68SFV34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DoIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,6 +424,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YZP68SFV34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DoIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
