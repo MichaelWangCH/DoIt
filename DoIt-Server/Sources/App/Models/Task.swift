@@ -14,6 +14,9 @@ struct Task: Model {
     var id: Node?
     var name: String
 
+    // used by fluent internally
+    var exists: Bool = false
+
     init(name: String) {
         self.id = nil
         self.name = name

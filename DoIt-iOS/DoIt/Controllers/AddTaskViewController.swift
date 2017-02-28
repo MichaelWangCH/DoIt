@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class AddTaskViewController: UIViewController {
 
@@ -23,6 +24,13 @@ class AddTaskViewController: UIViewController {
     }
 
     @IBAction func saveTask(_ sender: Any) {
+        if let name = nameTextView.text {
+            let parameters = ["name": name]
 
+            Alamofire.request("http://localhost:8080/tasks", method: .post, parameters: parameters).responseJSON { (response) in
+
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

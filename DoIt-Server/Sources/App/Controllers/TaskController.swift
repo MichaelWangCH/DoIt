@@ -13,9 +13,21 @@ class TaskController: ResourceRepresentable {
         return try Task.all().makeNode().converted(to: JSON.self)
     }
 
+    func create(request: Request) throws -> ResponseRepresentable {
+        guard let name = request.data["name"]?.string else {
+            throw Abort.badRequest
+        }
+
+        var task = Task(name: name)
+        try task.save()
+
+        return task
+    }
+
     func makeResource() -> Resource<Task> {
         return Resource(
-            index: index
+            index: index,
+            store: create
         )
     }
 }
