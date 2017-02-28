@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import Alamofire
 
-class TaskService: NSObject {
-    func getTaskList() -> [Task] {
-        let taskList = [Task(taskID: "1", taskName: "Complete coding the demo"),
-                        Task(taskID: "2", taskName: "Finish reading the document")]
+class TaskService {
+    static let sharedInstance = TaskService()
 
-        return taskList
+    func getTaskList(completion: @escaping ([Task]?) -> Void) {
+        Alamofire.request("http://localhost:8080/tasks").responseJSON { (response) in
+            if let jsonData = response.result.value as? [[String: AnyObject]] {
+                completion(jsonData.flatMap(Task.init))
+            } else {
+                completion(nil)
+            }
+        }
     }
 }

@@ -32,8 +32,12 @@ class TaskListViewController: UIViewController {
     }
 
     func refreshTaskList() {
-        taskList = TaskService().getTaskList()
-        taskListTableView.reloadData()
+        TaskService().getTaskList(completion: { (taskList) in
+            if let taskList = taskList {
+                self.taskList = taskList
+                self.taskListTableView.reloadData()
+            }
+        })
 
         if refreshControl.isRefreshing {
             refreshControl.endRefreshing()

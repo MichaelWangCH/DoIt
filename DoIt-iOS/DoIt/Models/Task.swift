@@ -16,4 +16,14 @@ struct Task {
         self.taskID = taskID
         self.taskName = taskName
     }
+
+    init?(json: [String: AnyObject]) {
+        guard let id = json["id"] as? Int,
+            let name = json["name"] as? String else {
+            return nil
+        }
+
+        self.taskID = String(id)
+        self.taskName = name
+    }
 }
