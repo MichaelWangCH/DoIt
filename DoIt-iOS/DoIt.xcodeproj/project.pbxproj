@@ -10,6 +10,7 @@
 		2C2A246A1E642A9200EF7C4C /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A24691E642A9200EF7C4C /* Cartfile */; };
 		2C53D24B1E64FCB3008BF6DF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C53D24A1E64FCB3008BF6DF /* Alamofire.framework */; };
 		2C53D24C1E64FCB3008BF6DF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C53D24A1E64FCB3008BF6DF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C53D24F1E6567A4008BF6DF /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C53D24D1E6567A4008BF6DF /* AddTaskViewController.swift */; };
 		2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */; };
 		2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7931E628AE8007E7A9D /* Task.swift */; };
 		2CDCB7971E62B190007E7A9D /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDCB7961E62B190007E7A9D /* TaskService.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		2C2A24691E642A9200EF7C4C /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		2C53D24A1E64FCB3008BF6DF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2C53D24D1E6567A4008BF6DF /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = Controllers/AddTaskViewController.swift; sourceTree = "<group>"; };
 		2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListViewController.swift; path = Controllers/TaskListViewController.swift; sourceTree = "<group>"; };
 		2CDCB7931E628AE8007E7A9D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Models/Task.swift; sourceTree = "<group>"; };
 		2CDCB7961E62B190007E7A9D /* TaskService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskService.swift; path = Services/TaskService.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2CDCB7901E628A8F007E7A9D /* TaskListViewController.swift */,
+				2C53D24D1E6567A4008BF6DF /* AddTaskViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				2CDFCCDA1E62834E00C37E2B /* AppDelegate.swift in Sources */,
 				2CDCB7941E628AE8007E7A9D /* Task.swift in Sources */,
 				2CDCB7911E628A8F007E7A9D /* TaskListViewController.swift in Sources */,
+				2C53D24F1E6567A4008BF6DF /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

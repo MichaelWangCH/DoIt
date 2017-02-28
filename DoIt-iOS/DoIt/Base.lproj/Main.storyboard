@@ -34,7 +34,13 @@
                             <constraint firstAttribute="trailing" secondItem="rhs-X2-GjD" secondAttribute="trailing" constant="15" id="uTQ-Jb-6Aq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ToDo List" id="dwT-3B-nwR"/>
+                    <navigationItem key="navigationItem" title="ToDo List" id="dwT-3B-nwR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TsN-4y-15G">
+                            <connections>
+                                <segue destination="enN-de-FSd" kind="presentation" id="nvO-gv-Ybo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="taskListTableView" destination="rhs-X2-GjD" id="9k2-ZO-csR"/>
                     </connections>
@@ -42,6 +48,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="36.431784107946029"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="wxw-1k-Cck">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="CaS-d4-ARJ" customClass="AddTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AwT-ah-nzx"/>
+                        <viewControllerLayoutGuide type="bottom" id="V3D-hk-VSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W5L-x1-TZP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nBX-CW-TgX">
+                                <rect key="frame" x="15" y="84" width="345" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="DIh-e4-wZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nBX-CW-TgX" secondAttribute="trailing" constant="15" id="MBe-VR-bjJ"/>
+                            <constraint firstItem="nBX-CW-TgX" firstAttribute="leading" secondItem="W5L-x1-TZP" secondAttribute="leading" constant="15" id="N10-LC-iSe"/>
+                            <constraint firstItem="nBX-CW-TgX" firstAttribute="top" secondItem="AwT-ah-nzx" secondAttribute="bottom" constant="20" id="Xmf-1N-afO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RXV-Th-wlM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8T0-jn-7xQ">
+                            <connections>
+                                <action selector="dismissPage:" destination="CaS-d4-ARJ" id="cZT-WU-7ii"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="MtS-1b-4wC">
+                            <connections>
+                                <action selector="saveTask:" destination="CaS-d4-ARJ" id="v3J-yI-3Zz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextView" destination="nBX-CW-TgX" id="C4i-p9-VdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMd-U9-VDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2568.8000000000002" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w1Z-7C-eOp">
@@ -60,6 +115,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cU2-3l-lnu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="690.40479760119945"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aIW-74-pZM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="enN-de-FSd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjA-qR-YGW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CaS-d4-ARJ" kind="relationship" relationship="rootViewController" id="2K1-7R-hOc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlg-4U-2Fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629.5999999999999" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>
