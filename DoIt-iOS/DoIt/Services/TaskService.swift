@@ -21,4 +21,17 @@ class TaskService {
             }
         }
     }
+
+    func saveTask(name: String, completion: @escaping () -> Void) {
+        let parameters = ["name": name]
+
+        Alamofire.request("http://localhost:8080/tasks", method: .post, parameters: parameters).responseJSON { (response) in
+            if let error = response.error {
+                print(error.localizedDescription)
+                completion()
+            } else {
+                completion()
+            }
+        }
+    }
 }

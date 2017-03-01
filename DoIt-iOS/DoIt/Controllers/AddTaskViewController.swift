@@ -12,7 +12,8 @@ import Alamofire
 class AddTaskViewController: UIViewController {
 
     @IBOutlet weak var nameTextView: UITextView!
-    
+    var didDismiss: () -> () = {}
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +26,11 @@ class AddTaskViewController: UIViewController {
 
     @IBAction func saveTask(_ sender: Any) {
         if let name = nameTextView.text {
-            let parameters = ["name": name]
-
-            Alamofire.request("http://localhost:8080/tasks", method: .post, parameters: parameters).responseJSON { (response) in
-
+            TaskService.sharedInstance.saveTask(name: name, completion: { 
                 self.dismiss(animated: true, completion: nil)
-            }
+
+                self.didDismiss()
+            })
         }
     }
 }

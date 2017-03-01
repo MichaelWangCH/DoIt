@@ -37,7 +37,7 @@
                     <navigationItem key="navigationItem" title="ToDo List" id="dwT-3B-nwR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TsN-4y-15G">
                             <connections>
-                                <segue destination="enN-de-FSd" kind="presentation" id="nvO-gv-Ybo"/>
+                                <action selector="addTask:" destination="BYZ-38-t0r" id="iDa-yn-1uO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,7 +119,8 @@
         <!--Navigation Controller-->
         <scene sceneID="aIW-74-pZM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="enN-de-FSd" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlg-4U-2Fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NavViewController" automaticallyAdjustsScrollViewInsets="NO" id="enN-de-FSd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjA-qR-YGW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -130,7 +131,6 @@
                         <segue destination="CaS-d4-ARJ" kind="relationship" relationship="rootViewController" id="2K1-7R-hOc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlg-4U-2Fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1629.5999999999999" y="35.532233883058474"/>
         </scene>

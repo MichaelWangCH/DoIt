@@ -43,6 +43,18 @@ class TaskListViewController: UIViewController {
             refreshControl.endRefreshing()
         }
     }
+
+    @IBAction func addTask(_ sender: Any) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let navViewController = storyBoard.instantiateViewController(withIdentifier: "NavViewController") as! UINavigationController
+        if let addTaskViewController = navViewController.childViewControllers.first as? AddTaskViewController {
+            addTaskViewController.didDismiss = {
+                self.refreshTaskList()
+            }
+        }
+
+        self.present(navViewController, animated: true, completion: nil)
+    }
 }
 
 extension TaskListViewController: UITableViewDataSource {
