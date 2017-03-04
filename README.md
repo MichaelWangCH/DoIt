@@ -13,4 +13,6 @@
 
 #### App
 
-open DoIt.xcodeproj in DoIt-iOS using Xcode and run the app.
+1. Install Carthage using Homebrew `brew install carthage`.
+2. Run `carthage update`.
+3. Open DoIt.xcodeproj in DoIt-iOS using Xcode and run the app.
